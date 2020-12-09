@@ -1,0 +1,2107 @@
+WARNING:tensorflow:From /home/aw14s/pointnet/models/pointnet_cls.py:13: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From train.py:84: The name tf.train.exponential_decay is deprecated. Please use tf.compat.v1.train.exponential_decay instead.
+
+WARNING:tensorflow:From train.py:104: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+WARNING:tensorflow:From /home/aw14s/pointnet/models/pointnet_cls.py:24: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+WARNING:tensorflow:
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /home/aw14s/pointnet/utils/tf_util.py:21: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+WARNING:tensorflow:From /home/aw14s/pointnet/utils/tf_util.py:48: The name tf.add_to_collection is deprecated. Please use tf.compat.v1.add_to_collection instead.
+
+WARNING:tensorflow:From /home/aw14s/pointnet/utils/tf_util.py:368: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+WARNING:tensorflow:Variable += will be deprecated. Use variable.assign_add if you want assignment to the variable value or 'x = x + y' if you want a new python Tensor object.
+WARNING:tensorflow:Variable += will be deprecated. Use variable.assign_add if you want assignment to the variable value or 'x = x + y' if you want a new python Tensor object.
+WARNING:tensorflow:From /home/aw14s/pointnet/utils/tf_util.py:573: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From train.py:111: to_int64 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+WARNING:tensorflow:From train.py:122: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+WARNING:tensorflow:From train.py:126: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+WARNING:tensorflow:From train.py:129: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+WARNING:tensorflow:From train.py:133: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2020-12-09 18:31:28.105740: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-12-09 18:31:28.114819: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394455000 Hz
+2020-12-09 18:31:28.116230: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x56400aa77e90 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-12-09 18:31:28.116286: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+WARNING:tensorflow:From train.py:137: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
+
+WARNING:tensorflow:From train.py:138: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+WARNING:tensorflow:From train.py:143: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+2020-12-09 18:31:28.887431: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignAdd: CPU 
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  Variable (VariableV2) /device:GPU:0
+  Variable/Assign (Assign) /device:GPU:0
+  Variable/read (Identity) /device:GPU:0
+  Adam/value (Const) /device:GPU:0
+  Adam (AssignAdd) /device:GPU:0
+  save/Assign (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.887792: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net1/tconv1/bn/beta (VariableV2) /device:GPU:0
+  transform_net1/tconv1/bn/beta/Assign (Assign) /device:GPU:0
+  transform_net1/tconv1/bn/beta/read (Identity) /device:GPU:0
+  transform_net1/tconv1/bn/beta/Adam/Initializer/zeros (Const) /device:GPU:0
+  transform_net1/tconv1/bn/beta/Adam (VariableV2) /device:GPU:0
+  transform_net1/tconv1/bn/beta/Adam/Assign (Assign) /device:GPU:0
+  transform_net1/tconv1/bn/beta/Adam/read (Identity) /device:GPU:0
+  transform_net1/tconv1/bn/beta/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  transform_net1/tconv1/bn/beta/Adam_1 (VariableV2) /device:GPU:0
+  transform_net1/tconv1/bn/beta/Adam_1/Assign (Assign) /device:GPU:0
+  transform_net1/tconv1/bn/beta/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_transform_net1/tconv1/bn/beta/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_110 (Assign) /device:GPU:0
+  save/Assign_111 (Assign) /device:GPU:0
+  save/Assign_112 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.887968: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net1/tconv1/bn/gamma (VariableV2) /device:GPU:0
+  transform_net1/tconv1/bn/gamma/Assign (Assign) /device:GPU:0
+  transform_net1/tconv1/bn/gamma/read (Identity) /device:GPU:0
+  transform_net1/tconv1/bn/gamma/Adam/Initializer/zeros (Const) /device:GPU:0
+  transform_net1/tconv1/bn/gamma/Adam (VariableV2) /device:GPU:0
+  transform_net1/tconv1/bn/gamma/Adam/Assign (Assign) /device:GPU:0
+  transform_net1/tconv1/bn/gamma/Adam/read (Identity) /device:GPU:0
+  transform_net1/tconv1/bn/gamma/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  transform_net1/tconv1/bn/gamma/Adam_1 (VariableV2) /device:GPU:0
+  transform_net1/tconv1/bn/gamma/Adam_1/Assign (Assign) /device:GPU:0
+  transform_net1/tconv1/bn/gamma/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_transform_net1/tconv1/bn/gamma/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_113 (Assign) /device:GPU:0
+  save/Assign_114 (Assign) /device:GPU:0
+  save/Assign_115 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.888206: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net1/tconv1/bn/transform_net1/tconv1/bn/moments/Squeeze/ExponentialMovingAverage/Initializer/zeros (Const) 
+  transform_net1/tconv1/bn/transform_net1/tconv1/bn/moments/Squeeze/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  transform_net1/tconv1/bn/transform_net1/tconv1/bn/moments/Squeeze/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  transform_net1/tconv1/bn/transform_net1/tconv1/bn/moments/Squeeze/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  transform_net1/tconv1/bn/cond/ExponentialMovingAverage/AssignMovingAvg/sub_1/Switch (Switch) /device:GPU:0
+  transform_net1/tconv1/bn/cond/ExponentialMovingAverage/AssignMovingAvg/Switch (RefSwitch) /device:GPU:0
+  transform_net1/tconv1/bn/cond/ExponentialMovingAverage/AssignMovingAvg (AssignSub) /device:GPU:0
+  transform_net1/tconv1/bn/cond_1/Switch_1 (Switch) /device:GPU:0
+  save/Assign_116 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.888420: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net1/tconv1/bn/transform_net1/tconv1/bn/moments/Squeeze_1/ExponentialMovingAverage/Initializer/zeros (Const) 
+  transform_net1/tconv1/bn/transform_net1/tconv1/bn/moments/Squeeze_1/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  transform_net1/tconv1/bn/transform_net1/tconv1/bn/moments/Squeeze_1/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  transform_net1/tconv1/bn/transform_net1/tconv1/bn/moments/Squeeze_1/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  transform_net1/tconv1/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/sub_1/Switch (Switch) /device:GPU:0
+  transform_net1/tconv1/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/Switch (RefSwitch) /device:GPU:0
+  transform_net1/tconv1/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1 (AssignSub) /device:GPU:0
+  transform_net1/tconv1/bn/cond_1/Switch_2 (Switch) /device:GPU:0
+  save/Assign_117 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.888746: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net1/tconv2/bn/beta (VariableV2) /device:GPU:0
+  transform_net1/tconv2/bn/beta/Assign (Assign) /device:GPU:0
+  transform_net1/tconv2/bn/beta/read (Identity) /device:GPU:0
+  transform_net1/tconv2/bn/beta/Adam/Initializer/zeros (Const) /device:GPU:0
+  transform_net1/tconv2/bn/beta/Adam (VariableV2) /device:GPU:0
+  transform_net1/tconv2/bn/beta/Adam/Assign (Assign) /device:GPU:0
+  transform_net1/tconv2/bn/beta/Adam/read (Identity) /device:GPU:0
+  transform_net1/tconv2/bn/beta/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  transform_net1/tconv2/bn/beta/Adam_1 (VariableV2) /device:GPU:0
+  transform_net1/tconv2/bn/beta/Adam_1/Assign (Assign) /device:GPU:0
+  transform_net1/tconv2/bn/beta/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_transform_net1/tconv2/bn/beta/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_124 (Assign) /device:GPU:0
+  save/Assign_125 (Assign) /device:GPU:0
+  save/Assign_126 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.888987: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net1/tconv2/bn/gamma (VariableV2) /device:GPU:0
+  transform_net1/tconv2/bn/gamma/Assign (Assign) /device:GPU:0
+  transform_net1/tconv2/bn/gamma/read (Identity) /device:GPU:0
+  transform_net1/tconv2/bn/gamma/Adam/Initializer/zeros (Const) /device:GPU:0
+  transform_net1/tconv2/bn/gamma/Adam (VariableV2) /device:GPU:0
+  transform_net1/tconv2/bn/gamma/Adam/Assign (Assign) /device:GPU:0
+  transform_net1/tconv2/bn/gamma/Adam/read (Identity) /device:GPU:0
+  transform_net1/tconv2/bn/gamma/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  transform_net1/tconv2/bn/gamma/Adam_1 (VariableV2) /device:GPU:0
+  transform_net1/tconv2/bn/gamma/Adam_1/Assign (Assign) /device:GPU:0
+  transform_net1/tconv2/bn/gamma/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_transform_net1/tconv2/bn/gamma/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_127 (Assign) /device:GPU:0
+  save/Assign_128 (Assign) /device:GPU:0
+  save/Assign_129 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.889246: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net1/tconv2/bn/transform_net1/tconv2/bn/moments/Squeeze/ExponentialMovingAverage/Initializer/zeros (Const) 
+  transform_net1/tconv2/bn/transform_net1/tconv2/bn/moments/Squeeze/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  transform_net1/tconv2/bn/transform_net1/tconv2/bn/moments/Squeeze/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  transform_net1/tconv2/bn/transform_net1/tconv2/bn/moments/Squeeze/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  transform_net1/tconv2/bn/cond/ExponentialMovingAverage/AssignMovingAvg/sub_1/Switch (Switch) /device:GPU:0
+  transform_net1/tconv2/bn/cond/ExponentialMovingAverage/AssignMovingAvg/Switch (RefSwitch) /device:GPU:0
+  transform_net1/tconv2/bn/cond/ExponentialMovingAverage/AssignMovingAvg (AssignSub) /device:GPU:0
+  transform_net1/tconv2/bn/cond_1/Switch_1 (Switch) /device:GPU:0
+  save/Assign_130 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.889464: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net1/tconv2/bn/transform_net1/tconv2/bn/moments/Squeeze_1/ExponentialMovingAverage/Initializer/zeros (Const) 
+  transform_net1/tconv2/bn/transform_net1/tconv2/bn/moments/Squeeze_1/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  transform_net1/tconv2/bn/transform_net1/tconv2/bn/moments/Squeeze_1/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  transform_net1/tconv2/bn/transform_net1/tconv2/bn/moments/Squeeze_1/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  transform_net1/tconv2/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/sub_1/Switch (Switch) /device:GPU:0
+  transform_net1/tconv2/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/Switch (RefSwitch) /device:GPU:0
+  transform_net1/tconv2/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1 (AssignSub) /device:GPU:0
+  transform_net1/tconv2/bn/cond_1/Switch_2 (Switch) /device:GPU:0
+  save/Assign_131 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.889767: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Fill: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net1/tconv3/bn/beta (VariableV2) /device:GPU:0
+  transform_net1/tconv3/bn/beta/Assign (Assign) /device:GPU:0
+  transform_net1/tconv3/bn/beta/read (Identity) /device:GPU:0
+  transform_net1/tconv3/bn/beta/Adam/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+  transform_net1/tconv3/bn/beta/Adam/Initializer/zeros/Const (Const) /device:GPU:0
+  transform_net1/tconv3/bn/beta/Adam/Initializer/zeros (Fill) /device:GPU:0
+  transform_net1/tconv3/bn/beta/Adam (VariableV2) /device:GPU:0
+  transform_net1/tconv3/bn/beta/Adam/Assign (Assign) /device:GPU:0
+  transform_net1/tconv3/bn/beta/Adam/read (Identity) /device:GPU:0
+  transform_net1/tconv3/bn/beta/Adam_1/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+  transform_net1/tconv3/bn/beta/Adam_1/Initializer/zeros/Const (Const) /device:GPU:0
+  transform_net1/tconv3/bn/beta/Adam_1/Initializer/zeros (Fill) /device:GPU:0
+  transform_net1/tconv3/bn/beta/Adam_1 (VariableV2) /device:GPU:0
+  transform_net1/tconv3/bn/beta/Adam_1/Assign (Assign) /device:GPU:0
+  transform_net1/tconv3/bn/beta/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_transform_net1/tconv3/bn/beta/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_138 (Assign) /device:GPU:0
+  save/Assign_139 (Assign) /device:GPU:0
+  save/Assign_140 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.889950: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Fill: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net1/tconv3/bn/gamma (VariableV2) /device:GPU:0
+  transform_net1/tconv3/bn/gamma/Assign (Assign) /device:GPU:0
+  transform_net1/tconv3/bn/gamma/read (Identity) /device:GPU:0
+  transform_net1/tconv3/bn/gamma/Adam/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+  transform_net1/tconv3/bn/gamma/Adam/Initializer/zeros/Const (Const) /device:GPU:0
+  transform_net1/tconv3/bn/gamma/Adam/Initializer/zeros (Fill) /device:GPU:0
+  transform_net1/tconv3/bn/gamma/Adam (VariableV2) /device:GPU:0
+  transform_net1/tconv3/bn/gamma/Adam/Assign (Assign) /device:GPU:0
+  transform_net1/tconv3/bn/gamma/Adam/read (Identity) /device:GPU:0
+  transform_net1/tconv3/bn/gamma/Adam_1/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+  transform_net1/tconv3/bn/gamma/Adam_1/Initializer/zeros/Const (Const) /device:GPU:0
+  transform_net1/tconv3/bn/gamma/Adam_1/Initializer/zeros (Fill) /device:GPU:0
+  transform_net1/tconv3/bn/gamma/Adam_1 (VariableV2) /device:GPU:0
+  transform_net1/tconv3/bn/gamma/Adam_1/Assign (Assign) /device:GPU:0
+  transform_net1/tconv3/bn/gamma/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_transform_net1/tconv3/bn/gamma/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_141 (Assign) /device:GPU:0
+  save/Assign_142 (Assign) /device:GPU:0
+  save/Assign_143 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.890093: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Fill: CPU XLA_CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+RefSwitch: CPU 
+Identity: CPU XLA_CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net1/tconv3/bn/transform_net1/tconv3/bn/moments/Squeeze/ExponentialMovingAverage/Initializer/zeros/shape_as_tensor (Const) 
+  transform_net1/tconv3/bn/transform_net1/tconv3/bn/moments/Squeeze/ExponentialMovingAverage/Initializer/zeros/Const (Const) 
+  transform_net1/tconv3/bn/transform_net1/tconv3/bn/moments/Squeeze/ExponentialMovingAverage/Initializer/zeros (Fill) 
+  transform_net1/tconv3/bn/transform_net1/tconv3/bn/moments/Squeeze/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  transform_net1/tconv3/bn/transform_net1/tconv3/bn/moments/Squeeze/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  transform_net1/tconv3/bn/transform_net1/tconv3/bn/moments/Squeeze/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  transform_net1/tconv3/bn/cond/ExponentialMovingAverage/AssignMovingAvg/sub_1/Switch (Switch) /device:GPU:0
+  transform_net1/tconv3/bn/cond/ExponentialMovingAverage/AssignMovingAvg/Switch (RefSwitch) /device:GPU:0
+  transform_net1/tconv3/bn/cond/ExponentialMovingAverage/AssignMovingAvg (AssignSub) /device:GPU:0
+  transform_net1/tconv3/bn/cond_1/Switch_1 (Switch) /device:GPU:0
+  save/Assign_144 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.890202: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Fill: CPU XLA_CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+RefSwitch: CPU 
+Identity: CPU XLA_CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net1/tconv3/bn/transform_net1/tconv3/bn/moments/Squeeze_1/ExponentialMovingAverage/Initializer/zeros/shape_as_tensor (Const) 
+  transform_net1/tconv3/bn/transform_net1/tconv3/bn/moments/Squeeze_1/ExponentialMovingAverage/Initializer/zeros/Const (Const) 
+  transform_net1/tconv3/bn/transform_net1/tconv3/bn/moments/Squeeze_1/ExponentialMovingAverage/Initializer/zeros (Fill) 
+  transform_net1/tconv3/bn/transform_net1/tconv3/bn/moments/Squeeze_1/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  transform_net1/tconv3/bn/transform_net1/tconv3/bn/moments/Squeeze_1/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  transform_net1/tconv3/bn/transform_net1/tconv3/bn/moments/Squeeze_1/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  transform_net1/tconv3/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/sub_1/Switch (Switch) /device:GPU:0
+  transform_net1/tconv3/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/Switch (RefSwitch) /device:GPU:0
+  transform_net1/tconv3/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1 (AssignSub) /device:GPU:0
+  transform_net1/tconv3/bn/cond_1/Switch_2 (Switch) /device:GPU:0
+  save/Assign_145 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.890372: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net1/tfc1/bn/beta (VariableV2) /device:GPU:0
+  transform_net1/tfc1/bn/beta/Assign (Assign) /device:GPU:0
+  transform_net1/tfc1/bn/beta/read (Identity) /device:GPU:0
+  transform_net1/tfc1/bn/beta/Adam/Initializer/zeros (Const) /device:GPU:0
+  transform_net1/tfc1/bn/beta/Adam (VariableV2) /device:GPU:0
+  transform_net1/tfc1/bn/beta/Adam/Assign (Assign) /device:GPU:0
+  transform_net1/tfc1/bn/beta/Adam/read (Identity) /device:GPU:0
+  transform_net1/tfc1/bn/beta/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  transform_net1/tfc1/bn/beta/Adam_1 (VariableV2) /device:GPU:0
+  transform_net1/tfc1/bn/beta/Adam_1/Assign (Assign) /device:GPU:0
+  transform_net1/tfc1/bn/beta/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_transform_net1/tfc1/bn/beta/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_152 (Assign) /device:GPU:0
+  save/Assign_153 (Assign) /device:GPU:0
+  save/Assign_154 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.890578: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net1/tfc1/bn/gamma (VariableV2) /device:GPU:0
+  transform_net1/tfc1/bn/gamma/Assign (Assign) /device:GPU:0
+  transform_net1/tfc1/bn/gamma/read (Identity) /device:GPU:0
+  transform_net1/tfc1/bn/gamma/Adam/Initializer/zeros (Const) /device:GPU:0
+  transform_net1/tfc1/bn/gamma/Adam (VariableV2) /device:GPU:0
+  transform_net1/tfc1/bn/gamma/Adam/Assign (Assign) /device:GPU:0
+  transform_net1/tfc1/bn/gamma/Adam/read (Identity) /device:GPU:0
+  transform_net1/tfc1/bn/gamma/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  transform_net1/tfc1/bn/gamma/Adam_1 (VariableV2) /device:GPU:0
+  transform_net1/tfc1/bn/gamma/Adam_1/Assign (Assign) /device:GPU:0
+  transform_net1/tfc1/bn/gamma/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_transform_net1/tfc1/bn/gamma/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_155 (Assign) /device:GPU:0
+  save/Assign_156 (Assign) /device:GPU:0
+  save/Assign_157 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.890782: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net1/tfc1/bn/transform_net1/tfc1/bn/moments/Squeeze/ExponentialMovingAverage/Initializer/zeros (Const) 
+  transform_net1/tfc1/bn/transform_net1/tfc1/bn/moments/Squeeze/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  transform_net1/tfc1/bn/transform_net1/tfc1/bn/moments/Squeeze/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  transform_net1/tfc1/bn/transform_net1/tfc1/bn/moments/Squeeze/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  transform_net1/tfc1/bn/cond/ExponentialMovingAverage/AssignMovingAvg/sub_1/Switch (Switch) /device:GPU:0
+  transform_net1/tfc1/bn/cond/ExponentialMovingAverage/AssignMovingAvg/Switch (RefSwitch) /device:GPU:0
+  transform_net1/tfc1/bn/cond/ExponentialMovingAverage/AssignMovingAvg (AssignSub) /device:GPU:0
+  transform_net1/tfc1/bn/cond_1/Switch_1 (Switch) /device:GPU:0
+  save/Assign_158 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.891048: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net1/tfc1/bn/transform_net1/tfc1/bn/moments/Squeeze_1/ExponentialMovingAverage/Initializer/zeros (Const) 
+  transform_net1/tfc1/bn/transform_net1/tfc1/bn/moments/Squeeze_1/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  transform_net1/tfc1/bn/transform_net1/tfc1/bn/moments/Squeeze_1/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  transform_net1/tfc1/bn/transform_net1/tfc1/bn/moments/Squeeze_1/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  transform_net1/tfc1/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/sub_1/Switch (Switch) /device:GPU:0
+  transform_net1/tfc1/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/Switch (RefSwitch) /device:GPU:0
+  transform_net1/tfc1/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1 (AssignSub) /device:GPU:0
+  transform_net1/tfc1/bn/cond_1/Switch_2 (Switch) /device:GPU:0
+  save/Assign_159 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.891433: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net1/tfc2/bn/beta (VariableV2) /device:GPU:0
+  transform_net1/tfc2/bn/beta/Assign (Assign) /device:GPU:0
+  transform_net1/tfc2/bn/beta/read (Identity) /device:GPU:0
+  transform_net1/tfc2/bn/beta/Adam/Initializer/zeros (Const) /device:GPU:0
+  transform_net1/tfc2/bn/beta/Adam (VariableV2) /device:GPU:0
+  transform_net1/tfc2/bn/beta/Adam/Assign (Assign) /device:GPU:0
+  transform_net1/tfc2/bn/beta/Adam/read (Identity) /device:GPU:0
+  transform_net1/tfc2/bn/beta/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  transform_net1/tfc2/bn/beta/Adam_1 (VariableV2) /device:GPU:0
+  transform_net1/tfc2/bn/beta/Adam_1/Assign (Assign) /device:GPU:0
+  transform_net1/tfc2/bn/beta/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_transform_net1/tfc2/bn/beta/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_166 (Assign) /device:GPU:0
+  save/Assign_167 (Assign) /device:GPU:0
+  save/Assign_168 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.891719: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net1/tfc2/bn/gamma (VariableV2) /device:GPU:0
+  transform_net1/tfc2/bn/gamma/Assign (Assign) /device:GPU:0
+  transform_net1/tfc2/bn/gamma/read (Identity) /device:GPU:0
+  transform_net1/tfc2/bn/gamma/Adam/Initializer/zeros (Const) /device:GPU:0
+  transform_net1/tfc2/bn/gamma/Adam (VariableV2) /device:GPU:0
+  transform_net1/tfc2/bn/gamma/Adam/Assign (Assign) /device:GPU:0
+  transform_net1/tfc2/bn/gamma/Adam/read (Identity) /device:GPU:0
+  transform_net1/tfc2/bn/gamma/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  transform_net1/tfc2/bn/gamma/Adam_1 (VariableV2) /device:GPU:0
+  transform_net1/tfc2/bn/gamma/Adam_1/Assign (Assign) /device:GPU:0
+  transform_net1/tfc2/bn/gamma/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_transform_net1/tfc2/bn/gamma/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_169 (Assign) /device:GPU:0
+  save/Assign_170 (Assign) /device:GPU:0
+  save/Assign_171 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.891984: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net1/tfc2/bn/transform_net1/tfc2/bn/moments/Squeeze/ExponentialMovingAverage/Initializer/zeros (Const) 
+  transform_net1/tfc2/bn/transform_net1/tfc2/bn/moments/Squeeze/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  transform_net1/tfc2/bn/transform_net1/tfc2/bn/moments/Squeeze/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  transform_net1/tfc2/bn/transform_net1/tfc2/bn/moments/Squeeze/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  transform_net1/tfc2/bn/cond/ExponentialMovingAverage/AssignMovingAvg/sub_1/Switch (Switch) /device:GPU:0
+  transform_net1/tfc2/bn/cond/ExponentialMovingAverage/AssignMovingAvg/Switch (RefSwitch) /device:GPU:0
+  transform_net1/tfc2/bn/cond/ExponentialMovingAverage/AssignMovingAvg (AssignSub) /device:GPU:0
+  transform_net1/tfc2/bn/cond_1/Switch_1 (Switch) /device:GPU:0
+  save/Assign_172 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.892202: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net1/tfc2/bn/transform_net1/tfc2/bn/moments/Squeeze_1/ExponentialMovingAverage/Initializer/zeros (Const) 
+  transform_net1/tfc2/bn/transform_net1/tfc2/bn/moments/Squeeze_1/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  transform_net1/tfc2/bn/transform_net1/tfc2/bn/moments/Squeeze_1/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  transform_net1/tfc2/bn/transform_net1/tfc2/bn/moments/Squeeze_1/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  transform_net1/tfc2/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/sub_1/Switch (Switch) /device:GPU:0
+  transform_net1/tfc2/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/Switch (RefSwitch) /device:GPU:0
+  transform_net1/tfc2/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1 (AssignSub) /device:GPU:0
+  transform_net1/tfc2/bn/cond_1/Switch_2 (Switch) /device:GPU:0
+  save/Assign_173 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.892470: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Fill: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+Assign: CPU 
+Const: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net1/transform_XYZ/weights/Initializer/Const (Const) 
+  transform_net1/transform_XYZ/weights (VariableV2) /device:GPU:0
+  transform_net1/transform_XYZ/weights/Assign (Assign) /device:GPU:0
+  transform_net1/transform_XYZ/weights/read (Identity) /device:GPU:0
+  transform_net1/transform_XYZ/weights/Adam/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+  transform_net1/transform_XYZ/weights/Adam/Initializer/zeros/Const (Const) /device:GPU:0
+  transform_net1/transform_XYZ/weights/Adam/Initializer/zeros (Fill) /device:GPU:0
+  transform_net1/transform_XYZ/weights/Adam (VariableV2) /device:GPU:0
+  transform_net1/transform_XYZ/weights/Adam/Assign (Assign) /device:GPU:0
+  transform_net1/transform_XYZ/weights/Adam/read (Identity) /device:GPU:0
+  transform_net1/transform_XYZ/weights/Adam_1/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+  transform_net1/transform_XYZ/weights/Adam_1/Initializer/zeros/Const (Const) /device:GPU:0
+  transform_net1/transform_XYZ/weights/Adam_1/Initializer/zeros (Fill) /device:GPU:0
+  transform_net1/transform_XYZ/weights/Adam_1 (VariableV2) /device:GPU:0
+  transform_net1/transform_XYZ/weights/Adam_1/Assign (Assign) /device:GPU:0
+  transform_net1/transform_XYZ/weights/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_transform_net1/transform_XYZ/weights/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_180 (Assign) /device:GPU:0
+  save/Assign_181 (Assign) /device:GPU:0
+  save/Assign_182 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.892613: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Identity: CPU XLA_CPU 
+Assign: CPU 
+Const: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net1/transform_XYZ/biases/Initializer/Const (Const) 
+  transform_net1/transform_XYZ/biases (VariableV2) /device:GPU:0
+  transform_net1/transform_XYZ/biases/Assign (Assign) /device:GPU:0
+  transform_net1/transform_XYZ/biases/read (Identity) /device:GPU:0
+  transform_net1/transform_XYZ/biases/Adam/Initializer/zeros (Const) /device:GPU:0
+  transform_net1/transform_XYZ/biases/Adam (VariableV2) /device:GPU:0
+  transform_net1/transform_XYZ/biases/Adam/Assign (Assign) /device:GPU:0
+  transform_net1/transform_XYZ/biases/Adam/read (Identity) /device:GPU:0
+  transform_net1/transform_XYZ/biases/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  transform_net1/transform_XYZ/biases/Adam_1 (VariableV2) /device:GPU:0
+  transform_net1/transform_XYZ/biases/Adam_1/Assign (Assign) /device:GPU:0
+  transform_net1/transform_XYZ/biases/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_transform_net1/transform_XYZ/biases/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_177 (Assign) /device:GPU:0
+  save/Assign_178 (Assign) /device:GPU:0
+  save/Assign_179 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.892838: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  conv1/bn/beta (VariableV2) /device:GPU:0
+  conv1/bn/beta/Assign (Assign) /device:GPU:0
+  conv1/bn/beta/read (Identity) /device:GPU:0
+  conv1/bn/beta/Adam/Initializer/zeros (Const) /device:GPU:0
+  conv1/bn/beta/Adam (VariableV2) /device:GPU:0
+  conv1/bn/beta/Adam/Assign (Assign) /device:GPU:0
+  conv1/bn/beta/Adam/read (Identity) /device:GPU:0
+  conv1/bn/beta/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  conv1/bn/beta/Adam_1 (VariableV2) /device:GPU:0
+  conv1/bn/beta/Adam_1/Assign (Assign) /device:GPU:0
+  conv1/bn/beta/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_conv1/bn/beta/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_6 (Assign) /device:GPU:0
+  save/Assign_7 (Assign) /device:GPU:0
+  save/Assign_8 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.892970: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  conv1/bn/gamma (VariableV2) /device:GPU:0
+  conv1/bn/gamma/Assign (Assign) /device:GPU:0
+  conv1/bn/gamma/read (Identity) /device:GPU:0
+  conv1/bn/gamma/Adam/Initializer/zeros (Const) /device:GPU:0
+  conv1/bn/gamma/Adam (VariableV2) /device:GPU:0
+  conv1/bn/gamma/Adam/Assign (Assign) /device:GPU:0
+  conv1/bn/gamma/Adam/read (Identity) /device:GPU:0
+  conv1/bn/gamma/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  conv1/bn/gamma/Adam_1 (VariableV2) /device:GPU:0
+  conv1/bn/gamma/Adam_1/Assign (Assign) /device:GPU:0
+  conv1/bn/gamma/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_conv1/bn/gamma/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_11 (Assign) /device:GPU:0
+  save/Assign_12 (Assign) /device:GPU:0
+  save/Assign_13 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.893173: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  conv1/bn/conv1/bn/moments/Squeeze/ExponentialMovingAverage/Initializer/zeros (Const) 
+  conv1/bn/conv1/bn/moments/Squeeze/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  conv1/bn/conv1/bn/moments/Squeeze/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  conv1/bn/conv1/bn/moments/Squeeze/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  conv1/bn/cond/ExponentialMovingAverage/AssignMovingAvg/sub_1/Switch (Switch) /device:GPU:0
+  conv1/bn/cond/ExponentialMovingAverage/AssignMovingAvg/Switch (RefSwitch) /device:GPU:0
+  conv1/bn/cond/ExponentialMovingAverage/AssignMovingAvg (AssignSub) /device:GPU:0
+  conv1/bn/cond_1/Switch_1 (Switch) /device:GPU:0
+  save/Assign_9 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.893330: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  conv1/bn/conv1/bn/moments/Squeeze_1/ExponentialMovingAverage/Initializer/zeros (Const) 
+  conv1/bn/conv1/bn/moments/Squeeze_1/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  conv1/bn/conv1/bn/moments/Squeeze_1/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  conv1/bn/conv1/bn/moments/Squeeze_1/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  conv1/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/sub_1/Switch (Switch) /device:GPU:0
+  conv1/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/Switch (RefSwitch) /device:GPU:0
+  conv1/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1 (AssignSub) /device:GPU:0
+  conv1/bn/cond_1/Switch_2 (Switch) /device:GPU:0
+  save/Assign_10 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.893597: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  conv2/bn/beta (VariableV2) /device:GPU:0
+  conv2/bn/beta/Assign (Assign) /device:GPU:0
+  conv2/bn/beta/read (Identity) /device:GPU:0
+  conv2/bn/beta/Adam/Initializer/zeros (Const) /device:GPU:0
+  conv2/bn/beta/Adam (VariableV2) /device:GPU:0
+  conv2/bn/beta/Adam/Assign (Assign) /device:GPU:0
+  conv2/bn/beta/Adam/read (Identity) /device:GPU:0
+  conv2/bn/beta/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  conv2/bn/beta/Adam_1 (VariableV2) /device:GPU:0
+  conv2/bn/beta/Adam_1/Assign (Assign) /device:GPU:0
+  conv2/bn/beta/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_conv2/bn/beta/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_20 (Assign) /device:GPU:0
+  save/Assign_21 (Assign) /device:GPU:0
+  save/Assign_22 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.893874: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  conv2/bn/gamma (VariableV2) /device:GPU:0
+  conv2/bn/gamma/Assign (Assign) /device:GPU:0
+  conv2/bn/gamma/read (Identity) /device:GPU:0
+  conv2/bn/gamma/Adam/Initializer/zeros (Const) /device:GPU:0
+  conv2/bn/gamma/Adam (VariableV2) /device:GPU:0
+  conv2/bn/gamma/Adam/Assign (Assign) /device:GPU:0
+  conv2/bn/gamma/Adam/read (Identity) /device:GPU:0
+  conv2/bn/gamma/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  conv2/bn/gamma/Adam_1 (VariableV2) /device:GPU:0
+  conv2/bn/gamma/Adam_1/Assign (Assign) /device:GPU:0
+  conv2/bn/gamma/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_conv2/bn/gamma/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_25 (Assign) /device:GPU:0
+  save/Assign_26 (Assign) /device:GPU:0
+  save/Assign_27 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.894152: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  conv2/bn/conv2/bn/moments/Squeeze/ExponentialMovingAverage/Initializer/zeros (Const) 
+  conv2/bn/conv2/bn/moments/Squeeze/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  conv2/bn/conv2/bn/moments/Squeeze/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  conv2/bn/conv2/bn/moments/Squeeze/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  conv2/bn/cond/ExponentialMovingAverage/AssignMovingAvg/sub_1/Switch (Switch) /device:GPU:0
+  conv2/bn/cond/ExponentialMovingAverage/AssignMovingAvg/Switch (RefSwitch) /device:GPU:0
+  conv2/bn/cond/ExponentialMovingAverage/AssignMovingAvg (AssignSub) /device:GPU:0
+  conv2/bn/cond_1/Switch_1 (Switch) /device:GPU:0
+  save/Assign_23 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.894379: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  conv2/bn/conv2/bn/moments/Squeeze_1/ExponentialMovingAverage/Initializer/zeros (Const) 
+  conv2/bn/conv2/bn/moments/Squeeze_1/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  conv2/bn/conv2/bn/moments/Squeeze_1/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  conv2/bn/conv2/bn/moments/Squeeze_1/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  conv2/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/sub_1/Switch (Switch) /device:GPU:0
+  conv2/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/Switch (RefSwitch) /device:GPU:0
+  conv2/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1 (AssignSub) /device:GPU:0
+  conv2/bn/cond_1/Switch_2 (Switch) /device:GPU:0
+  save/Assign_24 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.894722: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net2/tconv1/bn/beta (VariableV2) /device:GPU:0
+  transform_net2/tconv1/bn/beta/Assign (Assign) /device:GPU:0
+  transform_net2/tconv1/bn/beta/read (Identity) /device:GPU:0
+  transform_net2/tconv1/bn/beta/Adam/Initializer/zeros (Const) /device:GPU:0
+  transform_net2/tconv1/bn/beta/Adam (VariableV2) /device:GPU:0
+  transform_net2/tconv1/bn/beta/Adam/Assign (Assign) /device:GPU:0
+  transform_net2/tconv1/bn/beta/Adam/read (Identity) /device:GPU:0
+  transform_net2/tconv1/bn/beta/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  transform_net2/tconv1/bn/beta/Adam_1 (VariableV2) /device:GPU:0
+  transform_net2/tconv1/bn/beta/Adam_1/Assign (Assign) /device:GPU:0
+  transform_net2/tconv1/bn/beta/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_transform_net2/tconv1/bn/beta/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_186 (Assign) /device:GPU:0
+  save/Assign_187 (Assign) /device:GPU:0
+  save/Assign_188 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.894933: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net2/tconv1/bn/gamma (VariableV2) /device:GPU:0
+  transform_net2/tconv1/bn/gamma/Assign (Assign) /device:GPU:0
+  transform_net2/tconv1/bn/gamma/read (Identity) /device:GPU:0
+  transform_net2/tconv1/bn/gamma/Adam/Initializer/zeros (Const) /device:GPU:0
+  transform_net2/tconv1/bn/gamma/Adam (VariableV2) /device:GPU:0
+  transform_net2/tconv1/bn/gamma/Adam/Assign (Assign) /device:GPU:0
+  transform_net2/tconv1/bn/gamma/Adam/read (Identity) /device:GPU:0
+  transform_net2/tconv1/bn/gamma/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  transform_net2/tconv1/bn/gamma/Adam_1 (VariableV2) /device:GPU:0
+  transform_net2/tconv1/bn/gamma/Adam_1/Assign (Assign) /device:GPU:0
+  transform_net2/tconv1/bn/gamma/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_transform_net2/tconv1/bn/gamma/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_189 (Assign) /device:GPU:0
+  save/Assign_190 (Assign) /device:GPU:0
+  save/Assign_191 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.895107: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net2/tconv1/bn/transform_net2/tconv1/bn/moments/Squeeze/ExponentialMovingAverage/Initializer/zeros (Const) 
+  transform_net2/tconv1/bn/transform_net2/tconv1/bn/moments/Squeeze/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  transform_net2/tconv1/bn/transform_net2/tconv1/bn/moments/Squeeze/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  transform_net2/tconv1/bn/transform_net2/tconv1/bn/moments/Squeeze/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  transform_net2/tconv1/bn/cond/ExponentialMovingAverage/AssignMovingAvg/sub_1/Switch (Switch) /device:GPU:0
+  transform_net2/tconv1/bn/cond/ExponentialMovingAverage/AssignMovingAvg/Switch (RefSwitch) /device:GPU:0
+  transform_net2/tconv1/bn/cond/ExponentialMovingAverage/AssignMovingAvg (AssignSub) /device:GPU:0
+  transform_net2/tconv1/bn/cond_1/Switch_1 (Switch) /device:GPU:0
+  save/Assign_192 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.895222: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net2/tconv1/bn/transform_net2/tconv1/bn/moments/Squeeze_1/ExponentialMovingAverage/Initializer/zeros (Const) 
+  transform_net2/tconv1/bn/transform_net2/tconv1/bn/moments/Squeeze_1/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  transform_net2/tconv1/bn/transform_net2/tconv1/bn/moments/Squeeze_1/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  transform_net2/tconv1/bn/transform_net2/tconv1/bn/moments/Squeeze_1/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  transform_net2/tconv1/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/sub_1/Switch (Switch) /device:GPU:0
+  transform_net2/tconv1/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/Switch (RefSwitch) /device:GPU:0
+  transform_net2/tconv1/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1 (AssignSub) /device:GPU:0
+  transform_net2/tconv1/bn/cond_1/Switch_2 (Switch) /device:GPU:0
+  save/Assign_193 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.895390: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net2/tconv2/bn/beta (VariableV2) /device:GPU:0
+  transform_net2/tconv2/bn/beta/Assign (Assign) /device:GPU:0
+  transform_net2/tconv2/bn/beta/read (Identity) /device:GPU:0
+  transform_net2/tconv2/bn/beta/Adam/Initializer/zeros (Const) /device:GPU:0
+  transform_net2/tconv2/bn/beta/Adam (VariableV2) /device:GPU:0
+  transform_net2/tconv2/bn/beta/Adam/Assign (Assign) /device:GPU:0
+  transform_net2/tconv2/bn/beta/Adam/read (Identity) /device:GPU:0
+  transform_net2/tconv2/bn/beta/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  transform_net2/tconv2/bn/beta/Adam_1 (VariableV2) /device:GPU:0
+  transform_net2/tconv2/bn/beta/Adam_1/Assign (Assign) /device:GPU:0
+  transform_net2/tconv2/bn/beta/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_transform_net2/tconv2/bn/beta/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_200 (Assign) /device:GPU:0
+  save/Assign_201 (Assign) /device:GPU:0
+  save/Assign_202 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.895500: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net2/tconv2/bn/gamma (VariableV2) /device:GPU:0
+  transform_net2/tconv2/bn/gamma/Assign (Assign) /device:GPU:0
+  transform_net2/tconv2/bn/gamma/read (Identity) /device:GPU:0
+  transform_net2/tconv2/bn/gamma/Adam/Initializer/zeros (Const) /device:GPU:0
+  transform_net2/tconv2/bn/gamma/Adam (VariableV2) /device:GPU:0
+  transform_net2/tconv2/bn/gamma/Adam/Assign (Assign) /device:GPU:0
+  transform_net2/tconv2/bn/gamma/Adam/read (Identity) /device:GPU:0
+  transform_net2/tconv2/bn/gamma/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  transform_net2/tconv2/bn/gamma/Adam_1 (VariableV2) /device:GPU:0
+  transform_net2/tconv2/bn/gamma/Adam_1/Assign (Assign) /device:GPU:0
+  transform_net2/tconv2/bn/gamma/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_transform_net2/tconv2/bn/gamma/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_203 (Assign) /device:GPU:0
+  save/Assign_204 (Assign) /device:GPU:0
+  save/Assign_205 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.895711: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net2/tconv2/bn/transform_net2/tconv2/bn/moments/Squeeze/ExponentialMovingAverage/Initializer/zeros (Const) 
+  transform_net2/tconv2/bn/transform_net2/tconv2/bn/moments/Squeeze/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  transform_net2/tconv2/bn/transform_net2/tconv2/bn/moments/Squeeze/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  transform_net2/tconv2/bn/transform_net2/tconv2/bn/moments/Squeeze/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  transform_net2/tconv2/bn/cond/ExponentialMovingAverage/AssignMovingAvg/sub_1/Switch (Switch) /device:GPU:0
+  transform_net2/tconv2/bn/cond/ExponentialMovingAverage/AssignMovingAvg/Switch (RefSwitch) /device:GPU:0
+  transform_net2/tconv2/bn/cond/ExponentialMovingAverage/AssignMovingAvg (AssignSub) /device:GPU:0
+  transform_net2/tconv2/bn/cond_1/Switch_1 (Switch) /device:GPU:0
+  save/Assign_206 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.895970: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net2/tconv2/bn/transform_net2/tconv2/bn/moments/Squeeze_1/ExponentialMovingAverage/Initializer/zeros (Const) 
+  transform_net2/tconv2/bn/transform_net2/tconv2/bn/moments/Squeeze_1/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  transform_net2/tconv2/bn/transform_net2/tconv2/bn/moments/Squeeze_1/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  transform_net2/tconv2/bn/transform_net2/tconv2/bn/moments/Squeeze_1/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  transform_net2/tconv2/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/sub_1/Switch (Switch) /device:GPU:0
+  transform_net2/tconv2/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/Switch (RefSwitch) /device:GPU:0
+  transform_net2/tconv2/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1 (AssignSub) /device:GPU:0
+  transform_net2/tconv2/bn/cond_1/Switch_2 (Switch) /device:GPU:0
+  save/Assign_207 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.896223: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Fill: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net2/tconv3/bn/beta (VariableV2) /device:GPU:0
+  transform_net2/tconv3/bn/beta/Assign (Assign) /device:GPU:0
+  transform_net2/tconv3/bn/beta/read (Identity) /device:GPU:0
+  transform_net2/tconv3/bn/beta/Adam/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+  transform_net2/tconv3/bn/beta/Adam/Initializer/zeros/Const (Const) /device:GPU:0
+  transform_net2/tconv3/bn/beta/Adam/Initializer/zeros (Fill) /device:GPU:0
+  transform_net2/tconv3/bn/beta/Adam (VariableV2) /device:GPU:0
+  transform_net2/tconv3/bn/beta/Adam/Assign (Assign) /device:GPU:0
+  transform_net2/tconv3/bn/beta/Adam/read (Identity) /device:GPU:0
+  transform_net2/tconv3/bn/beta/Adam_1/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+  transform_net2/tconv3/bn/beta/Adam_1/Initializer/zeros/Const (Const) /device:GPU:0
+  transform_net2/tconv3/bn/beta/Adam_1/Initializer/zeros (Fill) /device:GPU:0
+  transform_net2/tconv3/bn/beta/Adam_1 (VariableV2) /device:GPU:0
+  transform_net2/tconv3/bn/beta/Adam_1/Assign (Assign) /device:GPU:0
+  transform_net2/tconv3/bn/beta/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_transform_net2/tconv3/bn/beta/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_214 (Assign) /device:GPU:0
+  save/Assign_215 (Assign) /device:GPU:0
+  save/Assign_216 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.896451: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Fill: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net2/tconv3/bn/gamma (VariableV2) /device:GPU:0
+  transform_net2/tconv3/bn/gamma/Assign (Assign) /device:GPU:0
+  transform_net2/tconv3/bn/gamma/read (Identity) /device:GPU:0
+  transform_net2/tconv3/bn/gamma/Adam/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+  transform_net2/tconv3/bn/gamma/Adam/Initializer/zeros/Const (Const) /device:GPU:0
+  transform_net2/tconv3/bn/gamma/Adam/Initializer/zeros (Fill) /device:GPU:0
+  transform_net2/tconv3/bn/gamma/Adam (VariableV2) /device:GPU:0
+  transform_net2/tconv3/bn/gamma/Adam/Assign (Assign) /device:GPU:0
+  transform_net2/tconv3/bn/gamma/Adam/read (Identity) /device:GPU:0
+  transform_net2/tconv3/bn/gamma/Adam_1/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+  transform_net2/tconv3/bn/gamma/Adam_1/Initializer/zeros/Const (Const) /device:GPU:0
+  transform_net2/tconv3/bn/gamma/Adam_1/Initializer/zeros (Fill) /device:GPU:0
+  transform_net2/tconv3/bn/gamma/Adam_1 (VariableV2) /device:GPU:0
+  transform_net2/tconv3/bn/gamma/Adam_1/Assign (Assign) /device:GPU:0
+  transform_net2/tconv3/bn/gamma/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_transform_net2/tconv3/bn/gamma/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_217 (Assign) /device:GPU:0
+  save/Assign_218 (Assign) /device:GPU:0
+  save/Assign_219 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.896862: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Fill: CPU XLA_CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+RefSwitch: CPU 
+Identity: CPU XLA_CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net2/tconv3/bn/transform_net2/tconv3/bn/moments/Squeeze/ExponentialMovingAverage/Initializer/zeros/shape_as_tensor (Const) 
+  transform_net2/tconv3/bn/transform_net2/tconv3/bn/moments/Squeeze/ExponentialMovingAverage/Initializer/zeros/Const (Const) 
+  transform_net2/tconv3/bn/transform_net2/tconv3/bn/moments/Squeeze/ExponentialMovingAverage/Initializer/zeros (Fill) 
+  transform_net2/tconv3/bn/transform_net2/tconv3/bn/moments/Squeeze/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  transform_net2/tconv3/bn/transform_net2/tconv3/bn/moments/Squeeze/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  transform_net2/tconv3/bn/transform_net2/tconv3/bn/moments/Squeeze/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  transform_net2/tconv3/bn/cond/ExponentialMovingAverage/AssignMovingAvg/sub_1/Switch (Switch) /device:GPU:0
+  transform_net2/tconv3/bn/cond/ExponentialMovingAverage/AssignMovingAvg/Switch (RefSwitch) /device:GPU:0
+  transform_net2/tconv3/bn/cond/ExponentialMovingAverage/AssignMovingAvg (AssignSub) /device:GPU:0
+  transform_net2/tconv3/bn/cond_1/Switch_1 (Switch) /device:GPU:0
+  save/Assign_220 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.897331: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Fill: CPU XLA_CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+RefSwitch: CPU 
+Identity: CPU XLA_CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net2/tconv3/bn/transform_net2/tconv3/bn/moments/Squeeze_1/ExponentialMovingAverage/Initializer/zeros/shape_as_tensor (Const) 
+  transform_net2/tconv3/bn/transform_net2/tconv3/bn/moments/Squeeze_1/ExponentialMovingAverage/Initializer/zeros/Const (Const) 
+  transform_net2/tconv3/bn/transform_net2/tconv3/bn/moments/Squeeze_1/ExponentialMovingAverage/Initializer/zeros (Fill) 
+  transform_net2/tconv3/bn/transform_net2/tconv3/bn/moments/Squeeze_1/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  transform_net2/tconv3/bn/transform_net2/tconv3/bn/moments/Squeeze_1/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  transform_net2/tconv3/bn/transform_net2/tconv3/bn/moments/Squeeze_1/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  transform_net2/tconv3/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/sub_1/Switch (Switch) /device:GPU:0
+  transform_net2/tconv3/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/Switch (RefSwitch) /device:GPU:0
+  transform_net2/tconv3/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1 (AssignSub) /device:GPU:0
+  transform_net2/tconv3/bn/cond_1/Switch_2 (Switch) /device:GPU:0
+  save/Assign_221 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.897949: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net2/tfc1/bn/beta (VariableV2) /device:GPU:0
+  transform_net2/tfc1/bn/beta/Assign (Assign) /device:GPU:0
+  transform_net2/tfc1/bn/beta/read (Identity) /device:GPU:0
+  transform_net2/tfc1/bn/beta/Adam/Initializer/zeros (Const) /device:GPU:0
+  transform_net2/tfc1/bn/beta/Adam (VariableV2) /device:GPU:0
+  transform_net2/tfc1/bn/beta/Adam/Assign (Assign) /device:GPU:0
+  transform_net2/tfc1/bn/beta/Adam/read (Identity) /device:GPU:0
+  transform_net2/tfc1/bn/beta/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  transform_net2/tfc1/bn/beta/Adam_1 (VariableV2) /device:GPU:0
+  transform_net2/tfc1/bn/beta/Adam_1/Assign (Assign) /device:GPU:0
+  transform_net2/tfc1/bn/beta/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_transform_net2/tfc1/bn/beta/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_228 (Assign) /device:GPU:0
+  save/Assign_229 (Assign) /device:GPU:0
+  save/Assign_230 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.898294: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net2/tfc1/bn/gamma (VariableV2) /device:GPU:0
+  transform_net2/tfc1/bn/gamma/Assign (Assign) /device:GPU:0
+  transform_net2/tfc1/bn/gamma/read (Identity) /device:GPU:0
+  transform_net2/tfc1/bn/gamma/Adam/Initializer/zeros (Const) /device:GPU:0
+  transform_net2/tfc1/bn/gamma/Adam (VariableV2) /device:GPU:0
+  transform_net2/tfc1/bn/gamma/Adam/Assign (Assign) /device:GPU:0
+  transform_net2/tfc1/bn/gamma/Adam/read (Identity) /device:GPU:0
+  transform_net2/tfc1/bn/gamma/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  transform_net2/tfc1/bn/gamma/Adam_1 (VariableV2) /device:GPU:0
+  transform_net2/tfc1/bn/gamma/Adam_1/Assign (Assign) /device:GPU:0
+  transform_net2/tfc1/bn/gamma/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_transform_net2/tfc1/bn/gamma/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_231 (Assign) /device:GPU:0
+  save/Assign_232 (Assign) /device:GPU:0
+  save/Assign_233 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.898771: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net2/tfc1/bn/transform_net2/tfc1/bn/moments/Squeeze/ExponentialMovingAverage/Initializer/zeros (Const) 
+  transform_net2/tfc1/bn/transform_net2/tfc1/bn/moments/Squeeze/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  transform_net2/tfc1/bn/transform_net2/tfc1/bn/moments/Squeeze/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  transform_net2/tfc1/bn/transform_net2/tfc1/bn/moments/Squeeze/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  transform_net2/tfc1/bn/cond/ExponentialMovingAverage/AssignMovingAvg/sub_1/Switch (Switch) /device:GPU:0
+  transform_net2/tfc1/bn/cond/ExponentialMovingAverage/AssignMovingAvg/Switch (RefSwitch) /device:GPU:0
+  transform_net2/tfc1/bn/cond/ExponentialMovingAverage/AssignMovingAvg (AssignSub) /device:GPU:0
+  transform_net2/tfc1/bn/cond_1/Switch_1 (Switch) /device:GPU:0
+  save/Assign_234 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.899635: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net2/tfc1/bn/transform_net2/tfc1/bn/moments/Squeeze_1/ExponentialMovingAverage/Initializer/zeros (Const) 
+  transform_net2/tfc1/bn/transform_net2/tfc1/bn/moments/Squeeze_1/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  transform_net2/tfc1/bn/transform_net2/tfc1/bn/moments/Squeeze_1/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  transform_net2/tfc1/bn/transform_net2/tfc1/bn/moments/Squeeze_1/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  transform_net2/tfc1/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/sub_1/Switch (Switch) /device:GPU:0
+  transform_net2/tfc1/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/Switch (RefSwitch) /device:GPU:0
+  transform_net2/tfc1/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1 (AssignSub) /device:GPU:0
+  transform_net2/tfc1/bn/cond_1/Switch_2 (Switch) /device:GPU:0
+  save/Assign_235 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.902572: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net2/tfc2/bn/beta (VariableV2) /device:GPU:0
+  transform_net2/tfc2/bn/beta/Assign (Assign) /device:GPU:0
+  transform_net2/tfc2/bn/beta/read (Identity) /device:GPU:0
+  transform_net2/tfc2/bn/beta/Adam/Initializer/zeros (Const) /device:GPU:0
+  transform_net2/tfc2/bn/beta/Adam (VariableV2) /device:GPU:0
+  transform_net2/tfc2/bn/beta/Adam/Assign (Assign) /device:GPU:0
+  transform_net2/tfc2/bn/beta/Adam/read (Identity) /device:GPU:0
+  transform_net2/tfc2/bn/beta/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  transform_net2/tfc2/bn/beta/Adam_1 (VariableV2) /device:GPU:0
+  transform_net2/tfc2/bn/beta/Adam_1/Assign (Assign) /device:GPU:0
+  transform_net2/tfc2/bn/beta/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_transform_net2/tfc2/bn/beta/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_242 (Assign) /device:GPU:0
+  save/Assign_243 (Assign) /device:GPU:0
+  save/Assign_244 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.903848: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net2/tfc2/bn/gamma (VariableV2) /device:GPU:0
+  transform_net2/tfc2/bn/gamma/Assign (Assign) /device:GPU:0
+  transform_net2/tfc2/bn/gamma/read (Identity) /device:GPU:0
+  transform_net2/tfc2/bn/gamma/Adam/Initializer/zeros (Const) /device:GPU:0
+  transform_net2/tfc2/bn/gamma/Adam (VariableV2) /device:GPU:0
+  transform_net2/tfc2/bn/gamma/Adam/Assign (Assign) /device:GPU:0
+  transform_net2/tfc2/bn/gamma/Adam/read (Identity) /device:GPU:0
+  transform_net2/tfc2/bn/gamma/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  transform_net2/tfc2/bn/gamma/Adam_1 (VariableV2) /device:GPU:0
+  transform_net2/tfc2/bn/gamma/Adam_1/Assign (Assign) /device:GPU:0
+  transform_net2/tfc2/bn/gamma/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_transform_net2/tfc2/bn/gamma/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_245 (Assign) /device:GPU:0
+  save/Assign_246 (Assign) /device:GPU:0
+  save/Assign_247 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.904554: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net2/tfc2/bn/transform_net2/tfc2/bn/moments/Squeeze/ExponentialMovingAverage/Initializer/zeros (Const) 
+  transform_net2/tfc2/bn/transform_net2/tfc2/bn/moments/Squeeze/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  transform_net2/tfc2/bn/transform_net2/tfc2/bn/moments/Squeeze/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  transform_net2/tfc2/bn/transform_net2/tfc2/bn/moments/Squeeze/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  transform_net2/tfc2/bn/cond/ExponentialMovingAverage/AssignMovingAvg/sub_1/Switch (Switch) /device:GPU:0
+  transform_net2/tfc2/bn/cond/ExponentialMovingAverage/AssignMovingAvg/Switch (RefSwitch) /device:GPU:0
+  transform_net2/tfc2/bn/cond/ExponentialMovingAverage/AssignMovingAvg (AssignSub) /device:GPU:0
+  transform_net2/tfc2/bn/cond_1/Switch_1 (Switch) /device:GPU:0
+  save/Assign_248 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.905231: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net2/tfc2/bn/transform_net2/tfc2/bn/moments/Squeeze_1/ExponentialMovingAverage/Initializer/zeros (Const) 
+  transform_net2/tfc2/bn/transform_net2/tfc2/bn/moments/Squeeze_1/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  transform_net2/tfc2/bn/transform_net2/tfc2/bn/moments/Squeeze_1/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  transform_net2/tfc2/bn/transform_net2/tfc2/bn/moments/Squeeze_1/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  transform_net2/tfc2/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/sub_1/Switch (Switch) /device:GPU:0
+  transform_net2/tfc2/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/Switch (RefSwitch) /device:GPU:0
+  transform_net2/tfc2/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1 (AssignSub) /device:GPU:0
+  transform_net2/tfc2/bn/cond_1/Switch_2 (Switch) /device:GPU:0
+  save/Assign_249 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.905861: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Fill: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+Assign: CPU 
+Const: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net2/transform_feat/weights/Initializer/Const (Const) 
+  transform_net2/transform_feat/weights (VariableV2) /device:GPU:0
+  transform_net2/transform_feat/weights/Assign (Assign) /device:GPU:0
+  transform_net2/transform_feat/weights/read (Identity) /device:GPU:0
+  transform_net2/transform_feat/weights/Adam/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+  transform_net2/transform_feat/weights/Adam/Initializer/zeros/Const (Const) /device:GPU:0
+  transform_net2/transform_feat/weights/Adam/Initializer/zeros (Fill) /device:GPU:0
+  transform_net2/transform_feat/weights/Adam (VariableV2) /device:GPU:0
+  transform_net2/transform_feat/weights/Adam/Assign (Assign) /device:GPU:0
+  transform_net2/transform_feat/weights/Adam/read (Identity) /device:GPU:0
+  transform_net2/transform_feat/weights/Adam_1/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+  transform_net2/transform_feat/weights/Adam_1/Initializer/zeros/Const (Const) /device:GPU:0
+  transform_net2/transform_feat/weights/Adam_1/Initializer/zeros (Fill) /device:GPU:0
+  transform_net2/transform_feat/weights/Adam_1 (VariableV2) /device:GPU:0
+  transform_net2/transform_feat/weights/Adam_1/Assign (Assign) /device:GPU:0
+  transform_net2/transform_feat/weights/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_transform_net2/transform_feat/weights/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_256 (Assign) /device:GPU:0
+  save/Assign_257 (Assign) /device:GPU:0
+  save/Assign_258 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.906369: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Fill: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+Assign: CPU 
+Const: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  transform_net2/transform_feat/biases/Initializer/Const (Const) 
+  transform_net2/transform_feat/biases (VariableV2) /device:GPU:0
+  transform_net2/transform_feat/biases/Assign (Assign) /device:GPU:0
+  transform_net2/transform_feat/biases/read (Identity) /device:GPU:0
+  transform_net2/transform_feat/biases/Adam/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+  transform_net2/transform_feat/biases/Adam/Initializer/zeros/Const (Const) /device:GPU:0
+  transform_net2/transform_feat/biases/Adam/Initializer/zeros (Fill) /device:GPU:0
+  transform_net2/transform_feat/biases/Adam (VariableV2) /device:GPU:0
+  transform_net2/transform_feat/biases/Adam/Assign (Assign) /device:GPU:0
+  transform_net2/transform_feat/biases/Adam/read (Identity) /device:GPU:0
+  transform_net2/transform_feat/biases/Adam_1/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+  transform_net2/transform_feat/biases/Adam_1/Initializer/zeros/Const (Const) /device:GPU:0
+  transform_net2/transform_feat/biases/Adam_1/Initializer/zeros (Fill) /device:GPU:0
+  transform_net2/transform_feat/biases/Adam_1 (VariableV2) /device:GPU:0
+  transform_net2/transform_feat/biases/Adam_1/Assign (Assign) /device:GPU:0
+  transform_net2/transform_feat/biases/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_transform_net2/transform_feat/biases/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_253 (Assign) /device:GPU:0
+  save/Assign_254 (Assign) /device:GPU:0
+  save/Assign_255 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.908192: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  conv3/bn/beta (VariableV2) /device:GPU:0
+  conv3/bn/beta/Assign (Assign) /device:GPU:0
+  conv3/bn/beta/read (Identity) /device:GPU:0
+  conv3/bn/beta/Adam/Initializer/zeros (Const) /device:GPU:0
+  conv3/bn/beta/Adam (VariableV2) /device:GPU:0
+  conv3/bn/beta/Adam/Assign (Assign) /device:GPU:0
+  conv3/bn/beta/Adam/read (Identity) /device:GPU:0
+  conv3/bn/beta/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  conv3/bn/beta/Adam_1 (VariableV2) /device:GPU:0
+  conv3/bn/beta/Adam_1/Assign (Assign) /device:GPU:0
+  conv3/bn/beta/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_conv3/bn/beta/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_34 (Assign) /device:GPU:0
+  save/Assign_35 (Assign) /device:GPU:0
+  save/Assign_36 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.908533: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  conv3/bn/gamma (VariableV2) /device:GPU:0
+  conv3/bn/gamma/Assign (Assign) /device:GPU:0
+  conv3/bn/gamma/read (Identity) /device:GPU:0
+  conv3/bn/gamma/Adam/Initializer/zeros (Const) /device:GPU:0
+  conv3/bn/gamma/Adam (VariableV2) /device:GPU:0
+  conv3/bn/gamma/Adam/Assign (Assign) /device:GPU:0
+  conv3/bn/gamma/Adam/read (Identity) /device:GPU:0
+  conv3/bn/gamma/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  conv3/bn/gamma/Adam_1 (VariableV2) /device:GPU:0
+  conv3/bn/gamma/Adam_1/Assign (Assign) /device:GPU:0
+  conv3/bn/gamma/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_conv3/bn/gamma/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_39 (Assign) /device:GPU:0
+  save/Assign_40 (Assign) /device:GPU:0
+  save/Assign_41 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.908931: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  conv3/bn/conv3/bn/moments/Squeeze/ExponentialMovingAverage/Initializer/zeros (Const) 
+  conv3/bn/conv3/bn/moments/Squeeze/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  conv3/bn/conv3/bn/moments/Squeeze/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  conv3/bn/conv3/bn/moments/Squeeze/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  conv3/bn/cond/ExponentialMovingAverage/AssignMovingAvg/sub_1/Switch (Switch) /device:GPU:0
+  conv3/bn/cond/ExponentialMovingAverage/AssignMovingAvg/Switch (RefSwitch) /device:GPU:0
+  conv3/bn/cond/ExponentialMovingAverage/AssignMovingAvg (AssignSub) /device:GPU:0
+  conv3/bn/cond_1/Switch_1 (Switch) /device:GPU:0
+  save/Assign_37 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.909263: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  conv3/bn/conv3/bn/moments/Squeeze_1/ExponentialMovingAverage/Initializer/zeros (Const) 
+  conv3/bn/conv3/bn/moments/Squeeze_1/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  conv3/bn/conv3/bn/moments/Squeeze_1/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  conv3/bn/conv3/bn/moments/Squeeze_1/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  conv3/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/sub_1/Switch (Switch) /device:GPU:0
+  conv3/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/Switch (RefSwitch) /device:GPU:0
+  conv3/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1 (AssignSub) /device:GPU:0
+  conv3/bn/cond_1/Switch_2 (Switch) /device:GPU:0
+  save/Assign_38 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.909675: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  conv4/bn/beta (VariableV2) /device:GPU:0
+  conv4/bn/beta/Assign (Assign) /device:GPU:0
+  conv4/bn/beta/read (Identity) /device:GPU:0
+  conv4/bn/beta/Adam/Initializer/zeros (Const) /device:GPU:0
+  conv4/bn/beta/Adam (VariableV2) /device:GPU:0
+  conv4/bn/beta/Adam/Assign (Assign) /device:GPU:0
+  conv4/bn/beta/Adam/read (Identity) /device:GPU:0
+  conv4/bn/beta/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  conv4/bn/beta/Adam_1 (VariableV2) /device:GPU:0
+  conv4/bn/beta/Adam_1/Assign (Assign) /device:GPU:0
+  conv4/bn/beta/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_conv4/bn/beta/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_48 (Assign) /device:GPU:0
+  save/Assign_49 (Assign) /device:GPU:0
+  save/Assign_50 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.909967: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  conv4/bn/gamma (VariableV2) /device:GPU:0
+  conv4/bn/gamma/Assign (Assign) /device:GPU:0
+  conv4/bn/gamma/read (Identity) /device:GPU:0
+  conv4/bn/gamma/Adam/Initializer/zeros (Const) /device:GPU:0
+  conv4/bn/gamma/Adam (VariableV2) /device:GPU:0
+  conv4/bn/gamma/Adam/Assign (Assign) /device:GPU:0
+  conv4/bn/gamma/Adam/read (Identity) /device:GPU:0
+  conv4/bn/gamma/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  conv4/bn/gamma/Adam_1 (VariableV2) /device:GPU:0
+  conv4/bn/gamma/Adam_1/Assign (Assign) /device:GPU:0
+  conv4/bn/gamma/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_conv4/bn/gamma/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_53 (Assign) /device:GPU:0
+  save/Assign_54 (Assign) /device:GPU:0
+  save/Assign_55 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.910209: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  conv4/bn/conv4/bn/moments/Squeeze/ExponentialMovingAverage/Initializer/zeros (Const) 
+  conv4/bn/conv4/bn/moments/Squeeze/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  conv4/bn/conv4/bn/moments/Squeeze/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  conv4/bn/conv4/bn/moments/Squeeze/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  conv4/bn/cond/ExponentialMovingAverage/AssignMovingAvg/sub_1/Switch (Switch) /device:GPU:0
+  conv4/bn/cond/ExponentialMovingAverage/AssignMovingAvg/Switch (RefSwitch) /device:GPU:0
+  conv4/bn/cond/ExponentialMovingAverage/AssignMovingAvg (AssignSub) /device:GPU:0
+  conv4/bn/cond_1/Switch_1 (Switch) /device:GPU:0
+  save/Assign_51 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.910390: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  conv4/bn/conv4/bn/moments/Squeeze_1/ExponentialMovingAverage/Initializer/zeros (Const) 
+  conv4/bn/conv4/bn/moments/Squeeze_1/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  conv4/bn/conv4/bn/moments/Squeeze_1/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  conv4/bn/conv4/bn/moments/Squeeze_1/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  conv4/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/sub_1/Switch (Switch) /device:GPU:0
+  conv4/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/Switch (RefSwitch) /device:GPU:0
+  conv4/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1 (AssignSub) /device:GPU:0
+  conv4/bn/cond_1/Switch_2 (Switch) /device:GPU:0
+  save/Assign_52 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.910694: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Fill: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  conv5/bn/beta (VariableV2) /device:GPU:0
+  conv5/bn/beta/Assign (Assign) /device:GPU:0
+  conv5/bn/beta/read (Identity) /device:GPU:0
+  conv5/bn/beta/Adam/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+  conv5/bn/beta/Adam/Initializer/zeros/Const (Const) /device:GPU:0
+  conv5/bn/beta/Adam/Initializer/zeros (Fill) /device:GPU:0
+  conv5/bn/beta/Adam (VariableV2) /device:GPU:0
+  conv5/bn/beta/Adam/Assign (Assign) /device:GPU:0
+  conv5/bn/beta/Adam/read (Identity) /device:GPU:0
+  conv5/bn/beta/Adam_1/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+  conv5/bn/beta/Adam_1/Initializer/zeros/Const (Const) /device:GPU:0
+  conv5/bn/beta/Adam_1/Initializer/zeros (Fill) /device:GPU:0
+  conv5/bn/beta/Adam_1 (VariableV2) /device:GPU:0
+  conv5/bn/beta/Adam_1/Assign (Assign) /device:GPU:0
+  conv5/bn/beta/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_conv5/bn/beta/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_62 (Assign) /device:GPU:0
+  save/Assign_63 (Assign) /device:GPU:0
+  save/Assign_64 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.910904: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Fill: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  conv5/bn/gamma (VariableV2) /device:GPU:0
+  conv5/bn/gamma/Assign (Assign) /device:GPU:0
+  conv5/bn/gamma/read (Identity) /device:GPU:0
+  conv5/bn/gamma/Adam/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+  conv5/bn/gamma/Adam/Initializer/zeros/Const (Const) /device:GPU:0
+  conv5/bn/gamma/Adam/Initializer/zeros (Fill) /device:GPU:0
+  conv5/bn/gamma/Adam (VariableV2) /device:GPU:0
+  conv5/bn/gamma/Adam/Assign (Assign) /device:GPU:0
+  conv5/bn/gamma/Adam/read (Identity) /device:GPU:0
+  conv5/bn/gamma/Adam_1/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+  conv5/bn/gamma/Adam_1/Initializer/zeros/Const (Const) /device:GPU:0
+  conv5/bn/gamma/Adam_1/Initializer/zeros (Fill) /device:GPU:0
+  conv5/bn/gamma/Adam_1 (VariableV2) /device:GPU:0
+  conv5/bn/gamma/Adam_1/Assign (Assign) /device:GPU:0
+  conv5/bn/gamma/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_conv5/bn/gamma/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_67 (Assign) /device:GPU:0
+  save/Assign_68 (Assign) /device:GPU:0
+  save/Assign_69 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.911100: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Fill: CPU XLA_CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+RefSwitch: CPU 
+Identity: CPU XLA_CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  conv5/bn/conv5/bn/moments/Squeeze/ExponentialMovingAverage/Initializer/zeros/shape_as_tensor (Const) 
+  conv5/bn/conv5/bn/moments/Squeeze/ExponentialMovingAverage/Initializer/zeros/Const (Const) 
+  conv5/bn/conv5/bn/moments/Squeeze/ExponentialMovingAverage/Initializer/zeros (Fill) 
+  conv5/bn/conv5/bn/moments/Squeeze/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  conv5/bn/conv5/bn/moments/Squeeze/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  conv5/bn/conv5/bn/moments/Squeeze/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  conv5/bn/cond/ExponentialMovingAverage/AssignMovingAvg/sub_1/Switch (Switch) /device:GPU:0
+  conv5/bn/cond/ExponentialMovingAverage/AssignMovingAvg/Switch (RefSwitch) /device:GPU:0
+  conv5/bn/cond/ExponentialMovingAverage/AssignMovingAvg (AssignSub) /device:GPU:0
+  conv5/bn/cond_1/Switch_1 (Switch) /device:GPU:0
+  save/Assign_65 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.911268: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Fill: CPU XLA_CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+RefSwitch: CPU 
+Identity: CPU XLA_CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  conv5/bn/conv5/bn/moments/Squeeze_1/ExponentialMovingAverage/Initializer/zeros/shape_as_tensor (Const) 
+  conv5/bn/conv5/bn/moments/Squeeze_1/ExponentialMovingAverage/Initializer/zeros/Const (Const) 
+  conv5/bn/conv5/bn/moments/Squeeze_1/ExponentialMovingAverage/Initializer/zeros (Fill) 
+  conv5/bn/conv5/bn/moments/Squeeze_1/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  conv5/bn/conv5/bn/moments/Squeeze_1/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  conv5/bn/conv5/bn/moments/Squeeze_1/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  conv5/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/sub_1/Switch (Switch) /device:GPU:0
+  conv5/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/Switch (RefSwitch) /device:GPU:0
+  conv5/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1 (AssignSub) /device:GPU:0
+  conv5/bn/cond_1/Switch_2 (Switch) /device:GPU:0
+  save/Assign_66 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.911484: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  fc1/bn/beta (VariableV2) /device:GPU:0
+  fc1/bn/beta/Assign (Assign) /device:GPU:0
+  fc1/bn/beta/read (Identity) /device:GPU:0
+  fc1/bn/beta/Adam/Initializer/zeros (Const) /device:GPU:0
+  fc1/bn/beta/Adam (VariableV2) /device:GPU:0
+  fc1/bn/beta/Adam/Assign (Assign) /device:GPU:0
+  fc1/bn/beta/Adam/read (Identity) /device:GPU:0
+  fc1/bn/beta/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  fc1/bn/beta/Adam_1 (VariableV2) /device:GPU:0
+  fc1/bn/beta/Adam_1/Assign (Assign) /device:GPU:0
+  fc1/bn/beta/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_fc1/bn/beta/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_76 (Assign) /device:GPU:0
+  save/Assign_77 (Assign) /device:GPU:0
+  save/Assign_78 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.911712: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  fc1/bn/gamma (VariableV2) /device:GPU:0
+  fc1/bn/gamma/Assign (Assign) /device:GPU:0
+  fc1/bn/gamma/read (Identity) /device:GPU:0
+  fc1/bn/gamma/Adam/Initializer/zeros (Const) /device:GPU:0
+  fc1/bn/gamma/Adam (VariableV2) /device:GPU:0
+  fc1/bn/gamma/Adam/Assign (Assign) /device:GPU:0
+  fc1/bn/gamma/Adam/read (Identity) /device:GPU:0
+  fc1/bn/gamma/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  fc1/bn/gamma/Adam_1 (VariableV2) /device:GPU:0
+  fc1/bn/gamma/Adam_1/Assign (Assign) /device:GPU:0
+  fc1/bn/gamma/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_fc1/bn/gamma/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_81 (Assign) /device:GPU:0
+  save/Assign_82 (Assign) /device:GPU:0
+  save/Assign_83 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.912036: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  fc1/bn/fc1/bn/moments/Squeeze/ExponentialMovingAverage/Initializer/zeros (Const) 
+  fc1/bn/fc1/bn/moments/Squeeze/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  fc1/bn/fc1/bn/moments/Squeeze/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  fc1/bn/fc1/bn/moments/Squeeze/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  fc1/bn/cond/ExponentialMovingAverage/AssignMovingAvg/sub_1/Switch (Switch) /device:GPU:0
+  fc1/bn/cond/ExponentialMovingAverage/AssignMovingAvg/Switch (RefSwitch) /device:GPU:0
+  fc1/bn/cond/ExponentialMovingAverage/AssignMovingAvg (AssignSub) /device:GPU:0
+  fc1/bn/cond_1/Switch_1 (Switch) /device:GPU:0
+  save/Assign_79 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.912318: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  fc1/bn/fc1/bn/moments/Squeeze_1/ExponentialMovingAverage/Initializer/zeros (Const) 
+  fc1/bn/fc1/bn/moments/Squeeze_1/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  fc1/bn/fc1/bn/moments/Squeeze_1/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  fc1/bn/fc1/bn/moments/Squeeze_1/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  fc1/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/sub_1/Switch (Switch) /device:GPU:0
+  fc1/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/Switch (RefSwitch) /device:GPU:0
+  fc1/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1 (AssignSub) /device:GPU:0
+  fc1/bn/cond_1/Switch_2 (Switch) /device:GPU:0
+  save/Assign_80 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.912762: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  fc2/bn/beta (VariableV2) /device:GPU:0
+  fc2/bn/beta/Assign (Assign) /device:GPU:0
+  fc2/bn/beta/read (Identity) /device:GPU:0
+  fc2/bn/beta/Adam/Initializer/zeros (Const) /device:GPU:0
+  fc2/bn/beta/Adam (VariableV2) /device:GPU:0
+  fc2/bn/beta/Adam/Assign (Assign) /device:GPU:0
+  fc2/bn/beta/Adam/read (Identity) /device:GPU:0
+  fc2/bn/beta/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  fc2/bn/beta/Adam_1 (VariableV2) /device:GPU:0
+  fc2/bn/beta/Adam_1/Assign (Assign) /device:GPU:0
+  fc2/bn/beta/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_fc2/bn/beta/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_90 (Assign) /device:GPU:0
+  save/Assign_91 (Assign) /device:GPU:0
+  save/Assign_92 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.913075: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Const: CPU XLA_CPU 
+Identity: CPU XLA_CPU 
+ApplyAdam: CPU 
+VariableV2: CPU 
+Assign: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  fc2/bn/gamma (VariableV2) /device:GPU:0
+  fc2/bn/gamma/Assign (Assign) /device:GPU:0
+  fc2/bn/gamma/read (Identity) /device:GPU:0
+  fc2/bn/gamma/Adam/Initializer/zeros (Const) /device:GPU:0
+  fc2/bn/gamma/Adam (VariableV2) /device:GPU:0
+  fc2/bn/gamma/Adam/Assign (Assign) /device:GPU:0
+  fc2/bn/gamma/Adam/read (Identity) /device:GPU:0
+  fc2/bn/gamma/Adam_1/Initializer/zeros (Const) /device:GPU:0
+  fc2/bn/gamma/Adam_1 (VariableV2) /device:GPU:0
+  fc2/bn/gamma/Adam_1/Assign (Assign) /device:GPU:0
+  fc2/bn/gamma/Adam_1/read (Identity) /device:GPU:0
+  Adam/update_fc2/bn/gamma/ApplyAdam (ApplyAdam) /device:GPU:0
+  save/Assign_95 (Assign) /device:GPU:0
+  save/Assign_96 (Assign) /device:GPU:0
+  save/Assign_97 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.913465: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  fc2/bn/fc2/bn/moments/Squeeze/ExponentialMovingAverage/Initializer/zeros (Const) 
+  fc2/bn/fc2/bn/moments/Squeeze/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  fc2/bn/fc2/bn/moments/Squeeze/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  fc2/bn/fc2/bn/moments/Squeeze/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  fc2/bn/cond/ExponentialMovingAverage/AssignMovingAvg/sub_1/Switch (Switch) /device:GPU:0
+  fc2/bn/cond/ExponentialMovingAverage/AssignMovingAvg/Switch (RefSwitch) /device:GPU:0
+  fc2/bn/cond/ExponentialMovingAverage/AssignMovingAvg (AssignSub) /device:GPU:0
+  fc2/bn/cond_1/Switch_1 (Switch) /device:GPU:0
+  save/Assign_93 (Assign) /device:GPU:0
+
+2020-12-09 18:31:28.913842: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices: 
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+AssignSub: CPU 
+Const: CPU XLA_CPU 
+Switch: CPU XLA_CPU 
+Assign: CPU 
+VariableV2: CPU 
+Identity: CPU XLA_CPU 
+RefSwitch: CPU 
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  fc2/bn/fc2/bn/moments/Squeeze_1/ExponentialMovingAverage/Initializer/zeros (Const) 
+  fc2/bn/fc2/bn/moments/Squeeze_1/ExponentialMovingAverage (VariableV2) /device:GPU:0
+  fc2/bn/fc2/bn/moments/Squeeze_1/ExponentialMovingAverage/Assign (Assign) /device:GPU:0
+  fc2/bn/fc2/bn/moments/Squeeze_1/ExponentialMovingAverage/read (Identity) /device:GPU:0
+  fc2/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/sub_1/Switch (Switch) /device:GPU:0
+  fc2/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1/Switch (RefSwitch) /device:GPU:0
+  fc2/bn/cond/ExponentialMovingAverage/AssignMovingAvg_1 (AssignSub) /device:GPU:0
+  fc2/bn/cond_1/Switch_2 (Switch) /device:GPU:0
+  save/Assign_94 (Assign) /device:GPU:0
+
+Traceback (most recent call last):
+  File "train.py", line 261, in <module>
+    train()
+  File "train.py", line 162, in train
+    train_one_epoch(sess, ops, train_writer)
+  File "train.py", line 205, in train_one_epoch
+    ops['train_op'], ops['loss'], ops['pred']], feed_dict=feed_dict)
+  File "/home/aw14s/.cache/pypoetry/virtualenvs/pointnet-5Oydu493-py3.7/lib/python3.7/site-packages/tensorflow_core/python/client/session.py", line 956, in run
+    run_metadata_ptr)
+  File "/home/aw14s/.cache/pypoetry/virtualenvs/pointnet-5Oydu493-py3.7/lib/python3.7/site-packages/tensorflow_core/python/client/session.py", line 1180, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "/home/aw14s/.cache/pypoetry/virtualenvs/pointnet-5Oydu493-py3.7/lib/python3.7/site-packages/tensorflow_core/python/client/session.py", line 1359, in _do_run
+    run_metadata)
+  File "/home/aw14s/.cache/pypoetry/virtualenvs/pointnet-5Oydu493-py3.7/lib/python3.7/site-packages/tensorflow_core/python/client/session.py", line 1365, in _do_call
+    return fn(*args)
+  File "/home/aw14s/.cache/pypoetry/virtualenvs/pointnet-5Oydu493-py3.7/lib/python3.7/site-packages/tensorflow_core/python/client/session.py", line 1350, in _run_fn
+    target_list, run_metadata)
+  File "/home/aw14s/.cache/pypoetry/virtualenvs/pointnet-5Oydu493-py3.7/lib/python3.7/site-packages/tensorflow_core/python/client/session.py", line 1443, in _call_tf_sessionrun
+    run_metadata)
+KeyboardInterrupt
